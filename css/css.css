@@ -8,6 +8,28 @@ html {
   box-sizing: border-box;
 }
 
+
+  
+@media screen and (max-width : 768px) {
+	.bg {
+		background-size:cover;
+	}
+} 
+  
+  
+@media screen and (max-width : 2333333px) {
+	.bg {
+		background-size:130%;
+	}
+} 
+
+
+
+
+
+
+
+
 body {
   font-family: 'Quicksand', sans-serif;
   color: #324e63;
