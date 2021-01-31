@@ -14,7 +14,9 @@
 
 <body>
 
-<div class="wrapper" style="background-image: url(https://funny233.xyz/wp-content/uploads/2021/01/background2.jpg);background-repeat:no-repeat;background-size:cover;">
+
+
+<div class="wrapper" class="bg" id="bg" style="background-image: url(https://funny233.xyz/wp-content/uploads/2021/01/background2.jpg);">
 	<div class="profile-card js-profile-card">
 		<div class="profile-card__img">
 			<img src="https://funny233.xyz/wp-content/uploads/2020/08/cropped-未标题-2.png" alt="profile card">
@@ -61,6 +63,37 @@
 
 </div>
 
+
+
+<script>
+	
+	window.onload = function(){
+		
+		var background = document.getElementById("bg");
+		var range = 40;
+		var calcValue = function calcValue(a, b) {
+			return (a / b * range - range / 2).toFixed(1);
+		};
+		var timeout = void 0;
+		document.addEventListener('mousemove',
+		function(_ref) {
+			var x = _ref.x,
+			y = _ref.y;
+			if (timeout) {
+				window.cancelAnimationFrame(timeout);
+			}
+			timeout = window.requestAnimationFrame(function() {
+				var yValue = calcValue(y, window.innerHeight);
+				var xValue = calcValue(x, window.innerWidth);
+				console.log(xValue, yValue);
+						// xValue和yValue可以根据实际情况调,我这里y-50了
+				background.style.backgroundPositionX = xValue * 0.95 -200+ "px ";
+				background.style.backgroundPositionY =  (-yValue * 0.95-50 ) + "px";
+			})
+		},false);
+	
+	}
+</script>
 
 
 </body>
