@@ -1,102 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="zh-ch">
 <head>
-	<meta charset="UTF-8">
-	<meta name="baidu-site-verification" content="code-nU6bhDvaX4" />
-	<title>高坂滑稽果-funny233.xyz</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="icon" type="image/x-ico" href="https://funny233.xyz/wp-content/uploads/2020/08/cropped-未标题-2.png" />
-
-	<link rel="stylesheet" href="css/css.css">
-
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>高坂滑稽果的自我介绍</title>
 </head>
-
 <body>
+    
+    
+    <div class="bg">
+        <div class="proflieCard">
+            <div class="logo1">
+                <img src="img/logo.png" alt="" class="logo2">
+            </div>
+            <p class="name">高坂滑稽果</p>
+            
+            <div class="slogan" id="slogan">
+                <p class="slogan2" id="slogan2">如果奇迹有颜色，那么一定是橙色！</p>
+            </div>
+            <div class="buttons">
+                <button class="button1" onclick="aboutMe()">关于我</button>
+                <button class="button1" onclick="window.open('https://funny233.xyz')">进入博客</button>
+                <button class="button1" onclick="window.open('https://status.funny233.xyz')">服务器状态</button>
+            </div>
 
+            <footer class="footer">
+                <p class="footer2">Openned in <a target="_blank" href="https://github.com/woziji2200/ProfilePage">Github</a></p>
 
+                <p class="footer2">&copy2021 高坂滑稽果 &nbsp 素材来源 <a target="_blank" href="https://card.niconi.co.ni">LL查卡器</a> &nbsp 作者 <a target="_blank" href="https://www.funy233.xyz">高坂滑稽果</a></p>
+            </footer>
 
-<div class="wrapper" class="bg" id="bg" style="background-image: url(https://funny233.xyz/wp-content/uploads/2021/01/background2.jpg);">
-	<div class="profile-card js-profile-card">
-		<div class="profile-card__img">
-			<img src="https://funny233.xyz/wp-content/uploads/2020/08/cropped-未标题-2.png" alt="profile card">
-		</div>
-	
-		<div class="profile-card__cnt js-profile-cnt">
-			<div class="profile-card__name">高坂滑稽果</div>
-			<div class="profile-card__txt">一个果厨&nbsp;&nbsp;伟大的果皇啊~</div>
-			<!--
-			<div class="profile-card-loc">
-				<span class="profile-card-loc__icon">
-					<svg class="icon"><use xlink:href="#icon-location"></use></svg>
-				</span>
-				<span class="profile-card-loc__txt">中华人民共和国</span>
-			</div>
-			-->
-			<div class="profile-card-inf">
-				<div class="profile-card-inf__item">
-					<div class="profile-card-inf__title">&</div>
-					<div class="profile-card-inf__txt"><a href="https://space.bilibili.com/71950793" target="_blank">Bilibili</a></div>
-				</div>
-			
-				<div class="profile-card-inf__item">
-					<div class="profile-card-inf__title">&</div>
-					<div class="profile-card-inf__txt"><a href="https://tieba.baidu.com/home/main?id=tb.1.4cdf30c5.w6LWKNkjvoKFA2iQnXpCwA" target="_blank">贴吧</a></div>
-				</div>
-			
-				<div class="profile-card-inf__item">
-					<div class="profile-card-inf__title">&</div>
-					<div class="profile-card-inf__txt"><a href="https://github.com/woziji2200" target="_blank">Github</a></div>
-				</div>
-			
-			
-			<div class="profile-card-ctr">
-				<button class="profile-card__button button--blue js-message-btn" onclick="window.open('https://funny233.xyz')">进入博客</button>
-				<button class="profile-card__button button--orange" onclick="window.open('https://status.funny233.xyz') ">状态监控</button>
-			</div>
-			
-		</div>
-	
-		
-	
-	</div>
+        </div>
 
-</div>
+        
+    </div>
+    
+    
 
+    <img src="img/lihui.texb" class="lihui" id="lihui" alt="">
+    <div class="background" id="background"></div>
+    <div class="yinghua" id="yinghua"></div>
+    <div class="background2" id="background2"></div>
 
-
-<script>
-	
-	window.onload = function(){
-		
-		var background = document.getElementById("bg");
-		var range = 40;
-		var calcValue = function calcValue(a, b) {
-			return (a / b * range - range / 2).toFixed(1);
-		};
-		var timeout = void 0;
-		document.addEventListener('mousemove',
-		function(_ref) {
-			var x = _ref.x,
-			y = _ref.y;
-			if (timeout) {
-				window.cancelAnimationFrame(timeout);
-			}
-			timeout = window.requestAnimationFrame(function() {
-				var yValue = calcValue(y, window.innerHeight);
-				var xValue = calcValue(x, window.innerWidth);
-				console.log(xValue, yValue);
-						// xValue和yValue可以根据实际情况调,我这里y-50了
-				background.style.backgroundPositionX = xValue * 0.95 -200+ "px ";
-				background.style.backgroundPositionY =  (-yValue * 0.95-50 ) + "px";
-			})
-		},false);
-	
-	}
-</script>
-
-
+    <script src="main.js"></script>
+    <script>
+        window.onload=load2D_bg();
+        window.onload=load2D_bg2();
+        window.onload=load2D_bg2_2();//不写注释一时爽，写完再看火葬场
+        window.onload=load2D_lihui();
+        window.onload=load2D_yinghua();
+        
+        
+    </script>
+    
 </body>
-
 </html>
